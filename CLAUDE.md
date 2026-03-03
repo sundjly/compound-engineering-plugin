@@ -38,6 +38,19 @@ When working on this repository, follow the compounding engineering process:
 
 ## Working with This Repository
 
+## CLI Release Versioning
+
+The repository has two separate version surfaces:
+
+1. **Root CLI package** — `package.json`, root `CHANGELOG.md`, and repo `v*` tags all share one release line managed by semantic-release on `main`.
+2. **Embedded marketplace plugin metadata** — `plugins/compound-engineering/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` track the distributed Claude plugin metadata and can differ from the root CLI package version.
+
+Rules:
+
+- Do not start a separate root CLI version stream. The root CLI follows the repo tag line.
+- Do not hand-bump the root CLI `package.json` or root `CHANGELOG.md` for routine feature work. Use conventional commits and let semantic-release write the released root version back to git.
+- Continue updating embedded plugin metadata when the plugin contents themselves change.
+
 ### Adding a New Plugin
 
 1. Create plugin directory: `plugins/new-plugin-name/`

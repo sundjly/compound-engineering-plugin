@@ -13,6 +13,8 @@ component: plugin-development
 
 When making changes to the compound-engineering plugin, documentation can get out of sync with the actual components (agents, commands, skills). This leads to confusion about what's included in each version and makes it difficult to track changes over time.
 
+This document applies to the embedded marketplace plugin metadata, not the root CLI package release version. The root CLI package (`package.json`, root `CHANGELOG.md`, repo `v*` tags) is managed by semantic-release and follows the repository tag line.
+
 ## Solution
 
 **Every change to the plugin MUST include:**
@@ -75,3 +77,5 @@ This documentation serves as a reminder. When Claude Code works on this plugin, 
 - `/Users/kieranklaassen/compound-engineering-plugin/plugins/compound-engineering/.claude-plugin/plugin.json`
 - `/Users/kieranklaassen/compound-engineering-plugin/plugins/compound-engineering/CHANGELOG.md`
 - `/Users/kieranklaassen/compound-engineering-plugin/plugins/compound-engineering/README.md`
+- `/Users/kieranklaassen/compound-engineering-plugin/package.json`
+- `/Users/kieranklaassen/compound-engineering-plugin/CHANGELOG.md`

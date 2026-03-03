@@ -653,7 +653,8 @@ Use this checklist when adding a new target provider:
 - [ ] Update `CHANGELOG.md` with new target
 
 ### Version Bumping
-- [ ] Bump version in `package.json` (minor for new target)
+- [ ] Use a `feat(...)` conventional commit so semantic-release cuts the next minor root CLI release on `main`
+- [ ] Do not hand-start a separate root CLI version line in `package.json`; the root package follows the repo `v*` tags and semantic-release writes that version back after release
 - [ ] Update plugin.json description if component counts changed
 - [ ] Verify CHANGELOG entry is clear
 

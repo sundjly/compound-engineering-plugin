@@ -5,7 +5,9 @@ All notable changes to the `@every-env/compound-plugin` CLI tool will be documen
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.0] - 2026-03-03
+Release numbering now follows the repository `v*` tag line. Starting at `v2.34.0`, the root CLI package and this changelog stay on that shared version stream. Older entries below retain the previous `0.x` CLI numbering.
+
+## [2.34.0] - 2026-03-03
 
 ### Added
 
