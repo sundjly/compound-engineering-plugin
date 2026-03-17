@@ -76,6 +76,7 @@ Core workflow commands use `ce:` prefix to unambiguously identify them as compou
 
 | Command | Description |
 |---------|-------------|
+| `/ce:ideate` | Discover high-impact project improvements through divergent ideation and adversarial filtering |
 | `/ce:brainstorm` | Explore requirements and approaches before planning |
 | `/ce:plan` | Create implementation plans |
 | `/ce:review` | Run comprehensive code reviews |
