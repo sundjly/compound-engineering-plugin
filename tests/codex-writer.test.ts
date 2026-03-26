@@ -144,7 +144,7 @@ Use /deepen-plan for deeper research.
     await writeCodexBundle(tempRoot, bundle)
 
     const installedSkill = await fs.readFile(
-      path.join(tempRoot, ".codex", "skills", "ce:brainstorm", "SKILL.md"),
+      path.join(tempRoot, ".codex", "skills", "ce-brainstorm", "SKILL.md"),
       "utf8",
     )
     expect(installedSkill).toContain("/prompts:ce-plan")
@@ -152,7 +152,7 @@ Use /deepen-plan for deeper research.
     expect(installedSkill).toContain("/prompts:deepen-plan")
 
     const notes = await fs.readFile(
-      path.join(tempRoot, ".codex", "skills", "ce:brainstorm", "notes.md"),
+      path.join(tempRoot, ".codex", "skills", "ce-brainstorm", "notes.md"),
       "utf8",
     )
     expect(notes).toContain("/ce:plan")
@@ -194,7 +194,7 @@ Also run bare agents:
     await writeCodexBundle(tempRoot, bundle)
 
     const installedSkill = await fs.readFile(
-      path.join(tempRoot, ".codex", "skills", "ce:plan", "SKILL.md"),
+      path.join(tempRoot, ".codex", "skills", "ce-plan", "SKILL.md"),
       "utf8",
     )
 

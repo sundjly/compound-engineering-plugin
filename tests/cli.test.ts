@@ -216,7 +216,7 @@ describe("CLI", () => {
     expect(stdout).toContain("Installed compound-engineering")
     expect(stdout).toContain(codexRoot)
     expect(await exists(path.join(codexRoot, "prompts", "ce-plan.md"))).toBe(true)
-    expect(await exists(path.join(codexRoot, "skills", "ce:plan", "SKILL.md"))).toBe(true)
+    expect(await exists(path.join(codexRoot, "skills", "ce-plan", "SKILL.md"))).toBe(true)
     expect(await exists(path.join(codexRoot, "AGENTS.md"))).toBe(true)
   })
 
@@ -690,7 +690,7 @@ describe("CLI", () => {
     expect(stdout).toContain("Synced to gemini")
     expect(stdout).not.toContain("cursor")
 
-    expect(await exists(path.join(tempHome, ".config", "opencode", "commands", "workflows:plan.md"))).toBe(true)
+    expect(await exists(path.join(tempHome, ".config", "opencode", "commands", "workflows", "plan.md"))).toBe(true)
     expect(await exists(path.join(tempHome, ".codex", "config.toml"))).toBe(true)
     expect(await exists(path.join(tempHome, ".codex", "prompts", "workflows-plan.md"))).toBe(true)
     expect(await exists(path.join(tempHome, ".codex", "skills", "workflows-plan", "SKILL.md"))).toBe(true)
