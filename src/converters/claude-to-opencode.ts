@@ -80,6 +80,7 @@ export function convertClaudeToOpenCode(
   applyPermissions(config, plugin.commands, options.permissions)
 
   return {
+    pluginName: plugin.manifest.name,
     config,
     agents: agentFiles,
     commandFiles: cmdFiles,
@@ -361,11 +362,6 @@ function applyPermissions(
   }
 
   const permission: Record<string, "allow" | "deny" | Record<string, "allow" | "deny">> = {}
-  const tools: Record<string, boolean> = {}
-
-  for (const tool of sourceTools) {
-    tools[tool] = mode === "broad" ? true : enabled.has(tool)
-  }
 
   if (mode === "broad") {
     for (const tool of sourceTools) {
@@ -414,7 +410,6 @@ function applyPermissions(
   }
 
   config.permission = permission
-  config.tools = tools
 }
 
 function normalizeTool(raw: string): string | null {
